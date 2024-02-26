@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   # second form
   root 'home#index'
 
-  resources :vehicles, only: [:index, :new, :create, :show, :edit, :update, :destroy]
+  resources :vehicles
 end
