@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   # second form
   root 'home#index'
 
-  resources :vehicles, only: %i[ index ]
+  resources :vehicles, only: %i[ index new create show ]
 end
