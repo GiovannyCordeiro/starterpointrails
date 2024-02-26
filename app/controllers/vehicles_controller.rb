@@ -36,6 +36,12 @@ class VehiclesController < ApplicationController
     end
   end
 
+  def destroy()
+    @vehicle = Vehicle.find(params[:id])
+    @vehicle.destroy
+    redirect_to vehicle_path
+  end
+
   private
 
   def vehicle_params #strong parameters, verifica os parametros
