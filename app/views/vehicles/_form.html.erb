@@ -1,22 +1,22 @@
-<%= form_with model: vehicle, data: {turbo: false} do |f| %>
+<%= form_with model: vehicle, data: {turbo: false} do |form| %>
   <p>
-    <%= f.label :brand, 'brand' %>
-    <%= f.text_field :brand %>
+    <%= form.label :brand, 'brand' %>
+    <%= form.text_field :brand %>
   </p>
   <p>
-    <%= f.label :model, 'model' %>
-    <%= f.text_field :model %>
+    <%= form.label :model, 'model' %>
+    <%= form.text_field :model %>
   </p>
   <p>
-    <%= f.label :year, 'year' %>
-    <%= f.number_field :year %>
+    <%= form.label :year, 'year' %>
+    <%= form.number_field :year %>
   </p>
   <p>
-    <%= f.label :kind, 'kind' %>
-    <%= f.number_field :kind %>
+    <%= form.label :kind, 'kind' %>
+    <%= form.number_field :kind %>
   </p>
   <p>
-    <%= f.submit 'Create' %>
+    <%= form.submit 'Create' %>
   </p>
 
   <% if action_name == 'edit' %>
