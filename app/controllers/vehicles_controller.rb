@@ -14,12 +14,9 @@ class VehiclesController < ApplicationController
     # quando mandarem uma requisicao para essa rota, eu quero que tenha os
     # paramentros de vehicles.
     @vehicle = Vehicle.new(vehicle_params)
-    if @vehicle.save
-      redirect_to vehicle_path(@vehicle)
-    else
-      @vehicle = Vehicle.new
-      render :new
-    end
+    #guard clause
+    return redirect_to vehicle_path(@vehicle) if @vehicle.save
+    render :new
   end
 
   def show(); end
@@ -27,11 +24,8 @@ class VehiclesController < ApplicationController
   def edit(); end
 
   def update()
-    if @vehicle.update(vehicle_params)
-      redirect_to vehicle_path(@vehicle)
-    else
-      render :edit
-    end
+    return redirect_to @vehicle if @vehicle.update(vehicle_params)
+    render :edit
   end
 
   def destroy()
