@@ -1,0 +1,10 @@
+<p>
+    <%= vehicle.id %> |
+    <%= vehicle.brand %> |
+    <%= vehicle.model %> |
+    <%= vehicle.year %> |
+    <%= vehicle.kind %> |
+    <%= link_to 'Details', vehicle_path(vehicle) %>
+    <%= link_to 'Edit', edit_vehicle_path(vehicle) %>
+    <%= link_to 'Erase', vehicle_path(vehicle), data: { 'turbo-method': :delete, 'turbo-confirm': 'Confirma a ação de deletar?'} %>
+  </p>
