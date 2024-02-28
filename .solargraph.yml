@@ -1,0 +1,3 @@
+# dar sugestões de codigo e metodos apenas nos arquivos rb dentro de app
+include:
+- "app/*.rb"
